@@ -30,11 +30,12 @@ export const Text = styled.p`
   padding-bottom: 10px;
 `;
 export const LeftPart = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
 `;
 export const Bill = styled.div`
-  display: block;
+  /* display: block; */
 `;
 export const SelectTip = styled.p`
   all: unset;
@@ -61,16 +62,19 @@ export const Button = styled.button`
   font-family: "Space Mono";
 `;
 export const PersentConteiner = styled.div`
+  width: 100%;
   display: grid;
-  grid-template-columns: 50% 50%;
-  row-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+
+  place-items: center;
+  gap: 10px;
   margin-top: 15px;
   margin-bottom: 25px;
 `;
 export const PerPerson = styled.div``;
 export const AmountContainer = styled.div``;
 export const RightPart = styled.div`
-  min-width: 300px;
+  width: 100%;
   background-color: ${defaultTheme.colors.cyandark};
   border-radius: 15px;
 `;
@@ -78,6 +82,7 @@ export const AmountWrapper = styled.div`
   display: grid;
   grid-template-columns: 50% 50%;
   align-items: center;
+  place-items: center;
   /* row-gap: 20px; */
   column-gap: 40px;
   width: 100%;
