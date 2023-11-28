@@ -37,7 +37,7 @@ function App() {
   const [bill, setBill] = useState(null);
   const [tip, setTip] = useState(null);
   const [people, setPeople] = useState(null);
-  const [customTip, setCustomTip] = useState(0);
+  const [customTip, setCustomTip] = useState(null);
   const [showError, setShowError] = useState(false);
 
   const tipAmount = ((bill * (customTip !== null ? customTip / 100 : tip)) / people).toFixed(2);
@@ -118,6 +118,7 @@ function App() {
             </Bill>
             <div className="persent-Section">
               <SelectTip>Select Tip %</SelectTip>
+
               <PersentConteiner>
                 <Button
                   onClick={() => {
@@ -166,7 +167,7 @@ function App() {
                 </Button>
                 <PersentInput
                   type="number"
-                  placeholder="Custom"
+                  placeholder={customTip !== null ? "Custom" : "Custom"}
                   onChange={(e) => {
                     if (e.target.value.length < 3) {
                       setCustomTip(parseFloat(e.target.value));
