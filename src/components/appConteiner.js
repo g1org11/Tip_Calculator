@@ -18,6 +18,15 @@ const AppContainer = styled.div`
   border-radius: 25px 25px 0 0;
   overflow: hidden;
   width: 100%;
+  @media (min-width: 1024px) {
+    width: 1300px;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 25px;
+    justify-content: space-between;
+    margin: 0 auto;
+    gap: 50px;
+  }
 `;
 
 export default AppContainer;
@@ -48,6 +57,9 @@ export const PersentInput = styled(Input)`
   flex: 1 0 calc(50% - 8px);
   height: 48px;
   margin: 0;
+  @media (min-width: 1024px) {
+    flex-basis: calc(33.333% - 8px);
+  }
 `;
 
 export const Button = styled.button`
@@ -62,6 +74,9 @@ export const Button = styled.button`
     props.clicked ? `${defaultTheme.colors.cyandark}` : `${defaultTheme.colors.white}`};
   font-size: 24px;
   font-family: "Space Mono";
+  @media (min-width: 1024px) {
+    flex-basis: calc(33.333% - 8px);
+  }
 `;
 export const PersentConteiner = styled.div`
   display: flex;
@@ -69,6 +84,10 @@ export const PersentConteiner = styled.div`
   gap: 16px;
   margin-top: 15px;
   margin-bottom: 25px;
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 `;
 
 export const RightPart = styled.div`
