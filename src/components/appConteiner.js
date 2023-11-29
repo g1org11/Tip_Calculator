@@ -45,34 +45,32 @@ export const SelectTip = styled.p`
   padding-bottom: 20px;
 `;
 export const PersentInput = styled(Input)`
-  width: 130px;
-  height: 50px;
+  flex: 1 0 calc(50% - 8px);
+  height: 48px;
   margin: 0;
 `;
 
 export const Button = styled.button`
+  flex: 1 0 calc(50% - 8px);
   background-color: ${(props) =>
     props.clicked ? `${defaultTheme.colors.cyanStrong}` : defaultTheme.colors.cyandark};
   border: 0;
   border-radius: 5px;
-  width: 130px;
-  height: 50px;
-  color: ${defaultTheme.colors.white};
-  font-size: 16px;
+
+  height: 48px;
+  color: ${(props) =>
+    props.clicked ? `${defaultTheme.colors.cyandark}` : `${defaultTheme.colors.white}`};
+  font-size: 24px;
   font-family: "Space Mono";
 `;
 export const PersentConteiner = styled.div`
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  place-items: center;
-  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
   margin-top: 15px;
   margin-bottom: 25px;
 `;
-export const PerPerson = styled.div``;
-export const AmountContainer = styled.div``;
+
 export const RightPart = styled.div`
   width: 100%;
   background-color: ${defaultTheme.colors.cyandark};
@@ -123,6 +121,9 @@ export const ResrtBtn = styled.button`
   font-family: "Space Mono";
   color: ${defaultTheme.colors.cyandark};
   background-color: ${defaultTheme.colors.cyanStrong};
+  &:hover {
+    background-color: ${defaultTheme.colors.cyanLightGrayish};
+  }
 `;
 export const Errormassage = styled.p`
   font-size: 14px;
