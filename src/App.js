@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import styled, { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
 // import createGlobalStyle from "styled-components";
 import GlobalStyles from "./components/GlobalStyles";
 import { defaultTheme } from "./components/thame";
