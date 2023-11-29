@@ -19,7 +19,7 @@ const AppContainer = styled.div`
   overflow: hidden;
   width: 100%;
   @media (min-width: 1024px) {
-    width: 1300px;
+    width: 920px;
     flex-direction: row;
     align-items: center;
     border-radius: 25px;
@@ -94,6 +94,9 @@ export const RightPart = styled.div`
   width: 100%;
   background-color: ${defaultTheme.colors.cyandark};
   border-radius: 15px;
+  @media (min-width: 1024px) {
+    height: 417px;
+  }
 `;
 export const AmountWrapper = styled.div`
   display: grid;
@@ -105,11 +108,31 @@ export const AmountWrapper = styled.div`
   width: 100%;
   padding: 0 20px;
   margin-bottom: 25px;
+  @media (min-width: 1024px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+
+    column-gap: 20px;
+    padding: 40px;
+    margin-bottom: 90px;
+  }
+`;
+export const AmountDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 `;
 export const Amount = styled.p`
   margin-top: 20px;
   font-size: 16px;
   color: ${defaultTheme.colors.white};
+  @media (min-width: 1024px) {
+    margin: 0;
+    margin-top: 20px;
+    /* margin-bottom: 25px; */
+  }
 `;
 export const Person = styled.p`
   font-size: 12px;
@@ -120,12 +143,19 @@ export const PersentP = styled.p`
   margin-top: 20px;
   font-size: 26px;
   color: ${defaultTheme.colors.cyanStrong};
+  @media (min-width: 1024px) {
+    margin: 0;
+    font-size: 48px;
+  }
 `;
 export const ResetConteiner = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
+  @media (min-width: 1024px) {
+    margin-bottom: 40px;
+  }
 `;
 export const ResrtBtn = styled.button`
   all: unset;
@@ -150,4 +180,11 @@ export const Errormassage = styled.p`
   font-family: "Space Mono";
   margin-bottom: 20px;
   margin-top: -10px;
+  @media (min-width: 1024px) {
+    margin: 0;
+    position: absolute;
+    top: 59.3%;
+    left: 38%;
+    font-size: 16px;
+  }
 `;

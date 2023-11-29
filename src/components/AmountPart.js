@@ -1,18 +1,18 @@
 import React from "react";
-import { Amount, AmountWrapper, PersentP, Person } from "./appConteiner";
+import { Amount, AmountWrapper, PersentP, Person, AmountDiv } from "./appConteiner";
 
 const AmountPart = ({ tipAmount, notShowTip, notShowTotal, totalPerPerson }) => {
   return (
     <div>
       <AmountWrapper>
-        <div>
+        <AmountDiv>
           <Amount>
             Tip Amount<Person>/person</Person>{" "}
           </Amount>
           <Amount>
             Total <Person>/person</Person>
           </Amount>
-        </div>
+        </AmountDiv>
         <div>
           <PersentP>{notShowTip ? "0.00" : tipAmount}</PersentP>
 
